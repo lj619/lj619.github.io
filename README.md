@@ -1,2 +1,2 @@
-# lj619.github.io-
+# lj619.github.io
 Personal Homepage 
