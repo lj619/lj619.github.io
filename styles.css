@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Yaldevi&display=swap');
+
+:root { 
+	--bg: #16161e; 
+	--fg: #c0caf5; 
+	--bg-alt: #1a1b27; 
+	--fg-alt: #7aa2f7; 
+}
+
+@keyframes blink {
+	0% { 
+		opacity: 1; 
+	} 
+
+	50% { 
+		opacity: 0; 
+	} 
+
+	100% { 
+		opacity: 1; 
+	} 
+} 
+
+html, body, h1 {
+    margin: 0; 
+	padding: 0; 
+} 
+
+body { 
+	height: 100vh; 
+	width: 100vw; 
+	display: grid; 
+	place-items: center;
+	background-color: var(--bg); 
+	color: var(--fg); 	
+	font-family: 'Fira Code', monospace; 
+} 
+
+* { 
+	box-sizing: border-box; 
+} 
+
+main { 
+	display: grid;
+	grid-template-columns: auto; 
+	grid-template-rows: auto; 
+    grid-template-areas: 
+	"title" 
+	"links"; 	
+	margin: 5%;
+}
+
+.gridbox { 
+    background-color: var(--bg); 
+}
+
+#title { 
+	grid-area: title; 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+#links { 
+	grid-area: links;
+    display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	grid-template-rows: auto; 
+	grid-gap: 1.25em; 
+	grid-template-areas:
+	"subheading subheading subheading"
+	"searchbar searchbar searchbar"
+	"social media dev" 
+	"math school misc"; 	
+}
+
+.section, .verticalsection { 
+	background-color: var(--bg-alt);
+    border: 3px solid var(--bg-alt); 	
+    border-radius: 0.75rem;
+	padding: 1rem;
+	transition: all 0.75s; 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+} 
+
+.section { 
+	text-align: center; 
+} 
+
+.section:hover, .verticalsection:hover {
+	border: 3px solid var(--fg-alt);
+	transition: all 0.75s; 
+}
+
+#searchbox, #searchbox:active, #searchbox:focus {
+	width: 24rem;
+    border: none; 
+	background-color: transparent;
+	outline: none; 
+	padding: 0px;
+	margin-left: 5px; 
+	resize: none;
+	color: var(--fg); 
+	font-family: 'Fira Code', monospace;
+} 
+ 
+#searchbox::placeholder { 
+	color: var(--fg); 
+}  
+
+#searchprompt { 
+	font-size: 0; 
+	width: 100%;
+    display: flex; 	
+} 
+
+.prompt, #searchbox, #searchprompt button { 
+	font-size: 14pt; 
+}
+
+#searchprompt button { 
+	background-color: transparent; 
+	border: 0px; 
+	outline: none; 
+	color: var(--fg); 
+	cursor: pointer;
+	margin-left: auto; 
+	margin-right: 0; 
+} 
+
+#searchbar {
+	grid-area: searchbar;
+	display: flex; 
+	align-items: center; 	
+}
+
+#subheading { 
+	grid-area: subheading; 
+	text-align: center; 
+}
+
+#social { 
+	grid-area: social; 
+} 
+
+#media { 
+	grid-area: media; 
+} 
+
+#dev { 
+	grid-area: dev; 
+} 
+
+#math {
+	grid-area: math; 
+} 
+
+#school { 
+	grid-area: school; 
+} 
+
+#misc { 
+	grid-area: misc;
+}
+
+#heading { 
+	font-weight: bold; 
+	font-size: 2.25rem; 
+}
+
+.sinhala { 
+	font-family: 'Yaldevi', sans-serif; 
+}
+
+ul { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+.section-heading { 
+	font-size: 1.125em;
+	color: var(--fg-alt); 
+    margin: 1%; 	
+}
+
+a {
+	all: unset;
+	color: var(--fg);
+}
+
+a:hover {
+	color: var(--fg-alt);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.hl, .username {
+	color: var(--fg-alt); 
+} 
+
+#clock {
+	text-align: center; 
+	font-weight: bold; 
+	font-size: 2rem; 
+}
+
+.blink { 
+	animation: blink 1s ease-in-out infinite !important; 
+}
