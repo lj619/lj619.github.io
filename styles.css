@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Yaldevi&display=swap');
 
 :root { 
+	/* 
+	Tokyo Night 
 	--bg: #16161e; 
 	--fg: #c0caf5; 
 	--bg-alt: #1a1b27; 
 	--fg-alt: #7aa2f7; 
+	*/ 
+
+	/* Catppuccin Mocha */
+	--bg: #11111b; 
+	--fg: #cdd6f4; 
+	--bg-alt: #181825; 
+	--fg-alt: #b4befe; 
 }
 
 @keyframes blink {
